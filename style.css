@@ -1,5 +1,5 @@
 /* =========================
-   BASIC RESET
+   RESET
 ========================= */
 
 * {
@@ -8,25 +8,21 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8fafc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f7f8fb;
     color: #1e293b;
     line-height: 1.6;
 }
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
 
 ul {
     list-style: none;
@@ -34,12 +30,12 @@ ul {
 
 
 /* =========================
-   REUSABLE CONTAINER
+   GENERAL
 ========================= */
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
 }
 
@@ -49,128 +45,402 @@ ul {
 ========================= */
 
 .header {
-    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+
     border-bottom: 1px solid #e2e8f0;
+
+    backdrop-filter: blur(10px);
 }
 
-
 .navbar {
-    min-height: 75px;
+    min-height: 74px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-}
 
+    color: #172033;
+
+    letter-spacing: -0.5px;
+}
 
 .logo span {
-    color: #2563eb;
+    color: #0891b2;
 }
-
 
 .nav-links {
     display: flex;
-    gap: 30px;
-}
+    align-items: center;
 
+    gap: 28px;
+}
 
 .nav-links a {
-    font-size: 0.95rem;
+    position: relative;
+
+    color: #64748b;
+
+    font-size: 0.92rem;
     font-weight: 500;
 
-    transition: color 0.3s ease;
+    transition: color 0.25s ease;
 }
 
+.nav-links a::after {
+    content: "";
 
-.nav-links a:hover {
-    color: #2563eb;
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #0891b2;
+
+    border-radius: 20px;
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0f4c5c;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 
 /* =========================
-   HERO SECTION
+   HERO
 ========================= */
 
 .hero {
-    min-height: calc(100vh - 75px);
+    position: relative;
+
+    min-height: calc(100vh - 74px);
 
     display: flex;
     align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbfcfe 0%,
+            #f2f7f8 52%,
+            #f7f9fc 100%
+        );
 }
 
 
+/* Large top-right structure */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 460px;
+    height: 460px;
+
+    top: -190px;
+    right: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(8, 145, 178, 0.16),
+            rgba(8, 145, 178, 0.02) 70%
+        );
+}
+
+
+/* Bottom-left shape */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -150px;
+    left: -110px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(15, 76, 92, 0.10),
+            transparent 72%
+        );
+}
+
+
+/* =========================
+   HERO LAYOUT
+========================= */
+
+.hero-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 1.42fr 0.78fr;
+
+    align-items: center;
+
+    gap: 88px;
+
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
 .hero-content {
-    max-width: 850px;
+    max-width: 760px;
+
+    position: relative;
+}
+
+
+/* vertical design line */
+
+.hero-content::before {
+    content: "";
+
+    position: absolute;
+
+    left: -28px;
+    top: 5px;
+
+    width: 3px;
+    height: 115px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0891b2,
+            #0f4c5c
+        );
 }
 
 
 .hero-intro {
-    color: #2563eb;
+    display: inline-flex;
+    align-items: center;
 
-    font-size: 1.1rem;
+    gap: 8px;
+
+    color: #0891b2;
+
+    font-size: 0.95rem;
     font-weight: 600;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.hero-intro::before {
+    content: "";
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #0891b2;
+
+    border-radius: 10px;
 }
 
 
 .hero h1 {
     font-size: 4rem;
-    line-height: 1.1;
+    line-height: 1.08;
 
-    margin-bottom: 12px;
+    font-weight: 700;
+
+    color: #172033;
+
+    letter-spacing: -1.6px;
+
+    margin-bottom: 18px;
 }
 
 
-.hero h2 {
-    font-size: 2rem;
+/* =========================
+   HERO ROLE STRIP
+========================= */
 
-    color: #64748b;
+.hero-role {
+    display: grid;
 
-    margin-bottom: 25px;
+    grid-template-columns: repeat(2, max-content);
+
+    gap: 10px 12px;
+
+    margin-bottom: 28px;
+}
+
+
+.role-item {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 13px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 76, 92, 0.05);
+}
+
+
+.role-wide {
+    grid-column: 1 / -1;
+
+    width: fit-content;
+}
+
+
+.role-label {
+    color: #0891b2;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.role-item p {
+    color: #475569;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* subtle hover */
+
+.role-item {
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.role-item:hover {
+    transform: translateY(-2px);
+
+    border-color: #9bd7e2;
+
+    box-shadow:
+        0 7px 18px rgba(8, 145, 178, 0.09);
+}
+
+
+.hero-role span {
+    color: #67a9b8;
+
+    margin: 0 6px;
 }
 
 
 .hero-description {
     max-width: 700px;
 
-    font-size: 1.05rem;
+    color: #64748b;
 
-    color: #475569;
+    font-size: 1rem;
+    line-height: 1.85;
 
-    margin-bottom: 35px;
+    margin-bottom: 36px;
+
+}
+@media (max-width: 600px) {
+
+    .hero-role {
+        grid-template-columns: 1fr;
+    }
+
+
+    .role-wide {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    .role-item {
+        width: 100%;
+    }
+
 }
 
-
 /* =========================
-   BUTTONS
+   HERO BUTTONS
 ========================= */
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+
+    gap: 14px;
 }
 
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     padding: 12px 24px;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
+    font-size: 0.92rem;
     font-weight: 600;
 
     transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 
@@ -180,24 +450,400 @@ ul {
 
 
 .btn-primary {
-    background-color: #2563eb;
-    color: white;
+    background:
+        linear-gradient(
+            135deg,
+            #0891b2,
+            #0f4c5c
+        );
+
+    color: #ffffff;
+
+    border: 1px solid transparent;
+
+    box-shadow:
+        0 8px 20px rgba(8, 145, 178, 0.18);
 }
 
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    box-shadow:
+        0 11px 26px rgba(8, 145, 178, 0.25);
 }
 
 
 .btn-secondary {
-    border: 1px solid #2563eb;
+    background-color: rgba(255, 255, 255, 0.9);
 
-    color: #2563eb;
+    color: #475569;
+
+    border: 1px solid #cbd5e1;
 }
 
 
 .btn-secondary:hover {
-    background-color: #2563eb;
-    color: white;
+    color: #0f4c5c;
+
+    border-color: #67a9b8;
+
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   PROFILE SUMMARY CARD
+========================= */
+
+.profile-summary {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f9fbfc 100%
+        );
+
+    border: 1px solid #dfe6ea;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 22px 55px rgba(30, 41, 59, 0.10);
+
+    overflow: hidden;
+}
+
+
+/* top accent line */
+
+.profile-summary::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0891b2,
+            #0f4c5c
+        );
+}
+
+
+/* circle decoration */
+
+.profile-summary::after {
+    content: "";
+
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    top: -55px;
+    right: -50px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(8, 145, 178, 0.07);
+}
+
+
+/* small corner structure */
+
+.profile-summary .summary-title::after {
+    content: "";
+
+    display: block;
+
+    width: 38px;
+    height: 3px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0891b2,
+            #0f4c5c
+        );
+}
+
+
+.summary-title {
+    position: relative;
+    z-index: 2;
+
+    color: #172033;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+
+    margin-bottom: 22px;
+}
+
+
+.summary-row {
+    position: relative;
+    z-index: 2;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #edf1f4;
+}
+
+
+.summary-row:last-of-type {
+    border-bottom: none;
+}
+
+
+.summary-row span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    margin-bottom: 5px;
+}
+
+
+.summary-row strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 0.93rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* status pill */
+
+.summary-note {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 8px 12px;
+
+    background-color: #ecfeff;
+
+    border: 1px solid #cffafe;
+
+    border-radius: 999px;
+
+    color: #0f4c5c;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+
+.summary-dot {
+    width: 8px;
+    height: 8px;
+
+    background-color: #14b8a6;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   EXTRA STRUCTURE
+========================= */
+
+.hero-content::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 3px;
+
+    margin-top: 48px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0891b2 0%,
+            #0891b2 40%,
+            #0f4c5c 40%,
+            #0f4c5c 70%,
+            #cbd5e1 70%
+        );
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 980px) {
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    .profile-summary {
+        max-width: 620px;
+    }
+
+
+    .hero h1 {
+        font-size: 3.3rem;
+    }
+
+
+    .hero-content::before {
+        display: none;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero-layout {
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+        gap: 42px;
+    }
+
+
+    .hero h1 {
+        font-size: 2.7rem;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .hero-role {
+        font-size: 0.92rem;
+    }
+
+
+    .hero-description {
+        font-size: 0.93rem;
+
+        line-height: 1.75;
+    }
+
+
+    .profile-summary {
+        border-radius: 14px;
+
+        padding: 26px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+
+    .hero-role {
+        line-height: 1.8;
+    }
+
+
+    .hero-role span {
+        margin: 0 2px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+
+
+    .profile-summary {
+        padding: 23px 20px;
+    }
+
 }
