@@ -1,0 +1,203 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   REUSABLE CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.navbar {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.logo span {
+    color: #2563eb;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+.hero-intro {
+    color: #2563eb;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+
+    margin-bottom: 12px;
+}
+
+
+.hero h2 {
+    font-size: 2rem;
+
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-description {
+    max-width: 700px;
+
+    font-size: 1.05rem;
+
+    color: #475569;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+
+.btn-secondary {
+    border: 1px solid #2563eb;
+
+    color: #2563eb;
+}
+
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    color: white;
+}
