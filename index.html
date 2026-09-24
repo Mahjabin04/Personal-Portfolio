@@ -8,73 +8,297 @@
 
     <meta
         name="description"
-        content="Personal portfolio website showcasing my skills, projects, education and professional experience."
+        content="Personal portfolio of a Computer Science and Engineering student interested in AI, machine learning, data analysis, and web technologies."
     >
 
-    <title>Nusrat Mahjabin | Portfolio</title>
+    <title>Nusrat | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
+    
+         <!-- HEADER -->
+
     <header class="header">
-        <div class="container">
 
-            <nav class="navbar">
+        <div class="container navbar">
 
-                <a href="#" class="logo">
-                    Nusrat Mahjabin<span>.</span>
-                </a>
+            <a href="#home" class="logo">
+                Nusrat Mahjabin<span>.</span>
+            </a>
 
+            <nav>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
 
+                    <li>
+                        <a href="#home" class="active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#research">
+                            Research
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
             </nav>
 
         </div>
+
     </header>
 
 
+    <!-- MAIN CONTENT -->
+
     <main>
+
+        <!-- HERO -->
 
         <section class="hero" id="home">
 
-            <div class="container hero-content">
 
-                <p class="hero-intro">
-                    Hello, I'm 
-                </p>
+            <!-- BACKGROUND DECORATION -->
 
-                <h1>
-                    Nusrat Mahjabin
-                </h1>
+            <div class="hero-grid-pattern"></div>
 
-                <h2>
-                    Computer Science & Engineering Student
-                </h2>
+            <div class="background-shape shape-one"></div>
 
-                <p class="hero-description">
-                    I am passionate about software development, data analysis,
-                    cybersecurity and building practical technology solutions.
-                    This portfolio showcases some of my skills, academic work
-                    and personal projects.
-                </p>
+            <div class="background-shape shape-two"></div>
 
-                <div class="hero-buttons">
+            <div class="background-line line-one"></div>
 
-                    <a href="#projects" class="btn btn-primary">
-                        View My Work
-                    </a>
+            <div class="background-line line-two"></div>
 
-                    <a href="#contact" class="btn btn-secondary">
-                        Contact Me
-                    </a>
+
+            <div class="container hero-layout">
+
+
+
+                <div class="hero-content">
+
+                    <p class="hero-intro">
+                        Hello, I'm
+                    </p>
+
+
+                    <h1>
+                       Nusrat Mahjabin<span>.</span>
+                    </h1>
+
+
+                    <!-- ROLE TAGS -->
+
+                    <div class="hero-role">
+
+                        <span class="role-item">
+                            CSE Student
+                        </span>
+
+                        <span class="role-item">
+                            AI/ML Researcher
+                        </span>
+
+                        <span class="role-item role-wide">
+                            Interested in Web Technologies & Data Analysis
+                        </span>
+
+                    </div>
+
+
+                    <p class="hero-description">
+
+                        I am a Computer Science and Engineering student with a strong
+                        interest in artificial intelligence, machine learning, data
+                        analysis, and web technologies.
+
+                        Through academic research and coursework, I have worked on
+                        projects involving healthcare-focused machine learning, EEG
+                        analysis, explainable AI, and web development.
+
+                        I enjoy learning new technologies and applying them to
+                        practical, data-driven problems.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#research" class="btn btn-primary">
+                            View Research
+                        </a>
+
+                        <a href="#projects" class="btn btn-secondary">
+                            View Projects
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT SIDE
+                RESEARCH & BUILD STACK -->
+
+                <div class="work-stack">
+
+
+                    <!-- TOP LABEL -->
+
+                    <div class="stack-heading">
+
+                        <span class="stack-line"></span>
+
+                        <div>
+
+                            <span class="stack-label">
+                                Research & Build
+                            </span>
+
+                            <p>
+                                Selected academic and project work
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MAIN CARD -->
+
+                    <div class="work-card main-work-card">
+
+                        <div class="work-card-top">
+
+                            <span class="work-type">
+                                Published Research
+                            </span>
+
+                            <span class="work-mark">
+                                IEEE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Machine Learning for
+                            Hepatitis B Detection
+                        </h3>
+
+
+                        <p>
+                            Ensemble learning research focused on
+                            healthcare classification using
+                            machine learning techniques.
+                        </p>
+
+
+                        <div class="work-tags">
+
+                            <span>Machine Learning</span>
+
+                            <span>Healthcare AI</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SECOND CARD -->
+
+                    <div class="work-card research-card">
+
+                        <div class="mini-card-icon">
+                            R
+                        </div>
+
+                        <div>
+
+                            <span class="mini-label">
+                                Research
+                            </span>
+
+                            <h4>
+                                EEG & Explainable AI
+                            </h4>
+
+                            <p>
+                                ADHD detection using EEG signals,
+                                machine learning and explainability.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- THIRD CARD -->
+
+                    <div class="work-card project-card">
+
+                        <div class="mini-card-icon">
+                            W
+                        </div>
+
+                        <div>
+
+                            <span class="mini-label">
+                                Web Project
+                            </span>
+
+                            <h4>
+                                TripTonic
+                            </h4>
+
+                            <p>
+                                Multi-page Bangladesh travel website
+                                currently under development.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DECORATIVE LABEL -->
+
+                    <div class="stack-number">
+                        03
+                        <span>Selected Works</span>
+                    </div>
 
                 </div>
 
