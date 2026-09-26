@@ -3001,3 +3001,881 @@ ul {
         width: 55%;
     }
 }
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
+
+.skills-section {
+    position: relative;
+    padding: 120px 0 130px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(56, 189, 248, 0.07),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 12% 80%,
+            rgba(103, 232, 249, 0.04),
+            transparent 26%
+        ),
+        linear-gradient(
+            135deg,
+            #0a1421,
+            #0f1c2c 55%,
+            #0a1420
+        );
+
+    border-top:
+        1px solid
+        rgba(148, 163, 184, 0.07);
+}
+
+
+/* =========================================================
+   BACKGROUND WORD
+========================================================= */
+
+.skills-bg-word {
+    position: absolute;
+
+    right: -25px;
+    bottom: -25px;
+
+    color:
+        rgba(255, 255, 255, 0.018);
+
+    font-size:
+        clamp(8rem, 15vw, 14rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -9px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.skills-heading {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 780px;
+
+    margin-bottom: 70px;
+}
+
+
+.skills-kicker {
+    display: block;
+
+    color: var(--accent-light);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 11px;
+}
+
+
+.skills-heading h2 {
+    color: #f8fafc;
+
+    font-size: 2.65rem;
+
+    line-height: 1.22;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+}
+
+
+.skills-heading h2 span {
+    display: block;
+
+    color: #8fa0b2;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   MAIN SHOWCASE
+========================================================= */
+
+.skills-showcase {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "technical technical"
+        "ai soft";
+    gap: 65px 70px;
+}
+
+
+
+/* =========================================================
+   SHARED COLUMN HEADER
+========================================================= */
+
+.skills-column-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 38px;
+}
+
+
+
+.skills-column-number {
+    color:
+        rgba(56, 189, 248, 0.42);
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    margin-top: 4px;
+}
+
+
+.skills-column-heading small {
+    display: block;
+
+    color: #687d92;
+
+    font-size: 0.55rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 3px;
+}
+
+
+.skills-column-heading h3 {
+    color: #f1f5f9;
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.3px;
+}
+
+
+
+/* =========================================================
+   TECHNICAL SKILLS + PROFICIENCY
+========================================================= */
+
+.technical-column {
+    grid-area: technical;
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+}
+
+
+
+.technical-column::after {
+    display: none;
+}
+
+
+
+/* =========================================================
+   TWO-COLUMN TECHNICAL LAYOUT
+========================================================= */
+
+.technical-content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+    gap: 75px;
+    align-items: start;
+    width: 100%;
+}
+
+
+
+/* =========================================================
+   LEFT SIDE — TECHNICAL SKILLS
+========================================================= */
+
+.technical-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.technical-row {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    align-items: start;
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+
+
+.technical-row > span {
+    color: #9bb0c3;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1.45;
+}
+
+
+.technical-row > div {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap:
+        8px
+        9px;
+}
+
+
+.technical-row strong {
+    padding: 8px 13px;
+    color: #dce5ed;
+    background: rgba(61, 82, 104, 0.40);
+    border: 1px solid rgba(184, 202, 218, 0.10);
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 500;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+
+.technical-row strong:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        rgba(72, 98, 124, 0.54);
+
+    border-color:
+        rgba(103, 232, 249, 0.26);
+}
+
+
+/* =========================================================
+   RIGHT SIDE — PROFICIENCY
+========================================================= */
+
+.proficiency-area {
+    position: relative;
+    margin-top: 0;
+    padding: 8px 0 10px 38px;
+    border-left: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+
+
+/* accent dot */
+
+.proficiency-area::before {
+    content: "";
+
+    position: absolute;
+
+    left: -4px;
+    top: 40px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--accent);
+
+    box-shadow:
+        0 0 12px
+        rgba(56, 189, 248, 0.32);
+}
+
+
+/* =========================================================
+   PROFICIENCY HEADING
+========================================================= */
+
+.proficiency-heading {
+    margin-bottom: 26px;
+}
+
+
+.proficiency-heading span {
+    display: block;
+    color: #f1f5f9;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+
+.proficiency-heading p {
+    max-width: 300px;
+
+    color: #718397;
+
+    font-size: 0.66rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   PROFICIENCY ITEM
+========================================================= */
+
+.proficiency-item {
+    margin-bottom: 18px;
+}
+
+
+.proficiency-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+.proficiency-top span {
+    color: #d3dde6;
+
+    font-size: 0.73rem;
+
+    font-weight: 500;
+}
+
+
+.proficiency-top small {
+    color: #8094a8;
+
+    font-size: 0.56rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.65px;
+}
+
+
+/* =========================================================
+   PROFICIENCY BAR
+========================================================= */
+
+.proficiency-track {
+    position: relative;
+
+    width: 100%;
+    height: 5px;
+
+    overflow: hidden;
+
+    background:
+        rgba(148, 163, 184, 0.11);
+
+    border-radius:
+        999px;
+}
+
+
+.proficiency-fill {
+    height: 100%;
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent),
+            var(--accent-light)
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(56, 189, 248, 0.16);
+}
+
+
+/* =========================================================
+   PROFICIENCY LEVELS
+========================================================= */
+
+.level-advanced {
+    width: 88%;
+}
+
+
+.level-intermediate {
+    width: 65%;
+}
+
+
+.level-beginner {
+    width: 38%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .technical-content-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(260px, 0.72fr);
+
+        gap: 35px;
+    }
+
+
+    .technical-row {
+        grid-template-columns:
+            125px
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .technical-content-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .proficiency-area {
+        padding:
+            28px
+            0
+            0;
+
+        border-left: none;
+
+        border-top:
+            1px solid
+            rgba(148, 163, 184, 0.09);
+    }
+
+
+    .proficiency-area::before {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .technical-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .technical-row > span {
+        font-size: 0.78rem;
+    }
+
+
+    .technical-row strong {
+        font-size: 0.67rem;
+    }
+
+}
+
+/* =========================================================
+   AI & AUTOMATION
+========================================================= */
+
+.ai-column {
+    grid-area: ai;
+
+    position: relative;
+
+    padding-left: 4px;
+}
+
+
+.ai-tool-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+.ai-tool {
+    position: relative;
+
+    padding:
+        16px
+        0
+        16px
+        20px;
+
+    border-bottom:
+        1px solid
+        rgba(148, 163, 184, 0.08);
+
+    transition:
+        padding-left 0.2s ease;
+}
+
+
+.ai-tool::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 24px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--accent);
+
+    box-shadow:
+        0 0 10px
+        rgba(56, 189, 248, 0.28);
+}
+
+
+.ai-tool:hover {
+    padding-left: 25px;
+}
+
+
+.ai-tool span {
+    display: block;
+
+    color: #eef3f7;
+
+    font-size: 0.87rem;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+
+.ai-tool p {
+    color: #8394a6;
+
+    font-size: 0.69rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SOFT SKILLS
+========================================================= */
+
+.soft-column {
+    grid-area: soft;
+
+    position: relative;
+
+    margin-top: 8px;
+
+    padding-top: 28px;
+
+    border-top:
+        1px solid
+        rgba(148, 163, 184, 0.09);
+}
+
+
+.soft-skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap:
+        12px
+        14px;
+
+    max-width: 100%;
+}
+
+
+.soft-skill-list span {
+    position: relative;
+
+    padding:
+        10px
+        15px
+        10px
+        26px;
+
+    color: #c4d0da;
+
+    background:
+        rgba(49, 68, 89, 0.32);
+
+    border:
+        1px solid
+        rgba(177, 196, 212, 0.10);
+
+    border-radius:
+        999px;
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.soft-skill-list span::before {
+    content: "";
+
+    position: absolute;
+
+    left: 11px;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(103, 232, 249, 0.75);
+}
+
+
+.soft-skill-list span:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        rgba(58, 81, 105, 0.46);
+
+    border-color:
+        rgba(103, 232, 249, 0.23);
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE DETAIL
+========================================================= */
+
+.skills-showcase::before {
+    content: "";
+
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    right: 8%;
+    bottom: -30px;
+
+    border-radius: 50%;
+
+    border:
+        1px dashed
+        rgba(103, 232, 249, 0.05);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .skills-section {
+        padding:
+            90px
+            0;
+    }
+
+
+    .skills-showcase {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "technical"
+            "ai"
+            "soft";
+
+        gap: 45px;
+    }
+
+
+    .technical-column {
+        padding-right: 0;
+    }
+
+
+    .technical-column::after {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .skills-section {
+        padding:
+            65px
+            0;
+    }
+
+
+    .skills-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .skills-heading h2 {
+        font-size: 2rem;
+    }
+
+
+    .technical-row {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+
+    .soft-skill-list {
+        gap: 9px;
+    }
+
+
+    .skills-bg-word {
+        font-size: 5rem;
+
+        letter-spacing: -4px;
+    }
+
+}
+
+/* =========================================================
+   SKILLS LAYOUT FIX — RESPONSIVE OVERRIDES
+========================================================= */
+
+@media (max-width: 1000px) {
+    .technical-content-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+        gap: 45px;
+    }
+
+    .technical-row {
+        grid-template-columns: 145px 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 850px) {
+    .skills-showcase {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "technical"
+            "ai"
+            "soft";
+        gap: 48px;
+    }
+
+    .technical-content-layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .proficiency-area {
+        padding: 28px 0 0;
+        border-left: none;
+        border-top: 1px solid rgba(148, 163, 184, 0.09);
+    }
+
+    .proficiency-area::before {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .technical-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .technical-row > span {
+        font-size: 0.78rem;
+    }
+
+    .technical-row strong {
+        font-size: 0.69rem;
+    }
+}
+
