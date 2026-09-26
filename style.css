@@ -1259,17 +1259,20 @@ ul {
 
 
 /* =========================================================
-   EDUCATION SECTION — EDITORIAL STYLE
+   EDUCATION SECTION — OPEN EDITORIAL REDESIGN
 ========================================================= */
 
 .education-section {
     position: relative;
-
     padding: 125px 0 135px;
-
     overflow: hidden;
 
     background:
+        radial-gradient(
+            circle at 78% 22%,
+            rgba(56, 189, 248, 0.055),
+            transparent 26%
+        ),
         linear-gradient(
             120deg,
             #08111c 0%,
@@ -1287,35 +1290,30 @@ ul {
 
 .education-grid-bg {
     position: absolute;
-
     inset: 0;
 
     background-image:
         linear-gradient(
-            rgba(56, 189, 248, 0.025) 1px,
+            rgba(56, 189, 248, 0.022) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(56, 189, 248, 0.025) 1px,
+            rgba(56, 189, 248, 0.022) 1px,
             transparent 1px
         );
 
     background-size: 72px 72px;
-
     opacity: 0.8;
-
     pointer-events: none;
 }
 
 
-/* huge background word */
+/* large background word */
 
 .education-word {
     position: absolute;
-
     left: 50%;
-
     bottom: -25px;
 
     transform:
@@ -1324,31 +1322,24 @@ ul {
     color:
         rgba(255, 255, 255, 0.018);
 
-    font-size: clamp(8rem, 16vw, 15rem);
+    font-size:
+        clamp(8rem, 16vw, 15rem);
 
     line-height: 1;
-
     font-weight: 800;
-
     letter-spacing: -10px;
-
     white-space: nowrap;
-
     pointer-events: none;
 }
 
 
-/* diagonal structure */
+/* diagonal line */
 
 .edu-diagonal {
     position: absolute;
-
     width: 1px;
-
     height: 145%;
-
     left: 49%;
-
     top: -20%;
 
     transform:
@@ -1357,8 +1348,8 @@ ul {
     background:
         linear-gradient(
             transparent,
-            rgba(56, 189, 248, 0.18),
-            rgba(56, 189, 248, 0.05),
+            rgba(56, 189, 248, 0.16),
+            rgba(56, 189, 248, 0.04),
             transparent
         );
 
@@ -1372,71 +1363,51 @@ ul {
 
 .education-heading {
     position: relative;
-
     z-index: 3;
-
     max-width: 760px;
-
     margin-bottom: 70px;
 }
 
-
 .education-kicker {
     display: block;
-
     color: var(--accent-light);
-
     font-size: 0.67rem;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     margin-bottom: 12px;
 }
 
-
 .education-heading h2 {
     color: #f8fafc;
-
     font-size: 2.7rem;
-
     line-height: 1.2;
-
     letter-spacing: -1.2px;
-
     font-weight: 700;
 }
 
-
 .education-heading h2 span {
     display: block;
-
     color: #8798aa;
-
     font-weight: 500;
 }
 
 
 /* =========================================================
-   EDITORIAL LAYOUT
+   MAIN LAYOUT
 ========================================================= */
 
 .education-editorial {
     position: relative;
-
     z-index: 3;
 
     display: grid;
 
     grid-template-columns:
-        0.82fr
-        1.18fr;
+        0.86fr
+        1.14fr;
 
-    gap: 75px;
-
+    gap: 82px;
     align-items: center;
 }
 
@@ -1447,68 +1418,46 @@ ul {
 
 .education-left {
     position: relative;
-
     min-height: 470px;
 }
 
-
-/* CURRENT STATUS */
-
 .education-year {
     position: absolute;
-
     top: 0;
-
     left: 0;
 }
 
-
 .education-year span {
     display: block;
-
     color: #63778c;
-
     font-size: 0.58rem;
-
     font-weight: 700;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
 }
 
-
 .education-year strong {
     display: block;
-
     color: #d5dee7;
-
     font-size: 0.82rem;
-
     font-weight: 600;
-
     margin-top: 4px;
 }
 
 
-/* LARGE CSE LETTERING */
+/* large vertical CSE */
 
 .degree-vertical {
     position: absolute;
-
     left: -10px;
-
     top: 88px;
 
     color:
         rgba(56, 189, 248, 0.12);
 
     font-size: 9rem;
-
     line-height: 1;
-
     font-weight: 800;
-
     letter-spacing: -8px;
 
     transform:
@@ -1522,20 +1471,16 @@ ul {
 }
 
 
-/* DEGREE PATH */
+/* degree path */
 
 .study-line {
     position: absolute;
-
     left: 100px;
-
     top: 130px;
 
     display: flex;
-
     gap: 22px;
 }
-
 
 .study-line::before {
     content: "";
@@ -1543,29 +1488,24 @@ ul {
     position: absolute;
 
     left: 6px;
-
     top: 18px;
 
     width: 1px;
-
-    height: 215px;
+    height: 245px;
 
     background:
         linear-gradient(
             var(--accent),
-            rgba(56, 189, 248, 0.08),
+            rgba(56, 189, 248, 0.09),
             transparent
         );
 }
 
-
 .study-dot {
     position: relative;
-
     z-index: 2;
 
     width: 13px;
-
     height: 13px;
 
     margin-top: 3px;
@@ -1584,11 +1524,9 @@ ul {
         rgba(56, 189, 248, 0.34);
 }
 
-
 .study-line-content {
     padding-left: 5px;
 }
-
 
 .study-line-content > span {
     display: block;
@@ -1596,105 +1534,59 @@ ul {
     color: #64798f;
 
     font-size: 0.6rem;
-
     font-weight: 700;
 
     text-transform: uppercase;
-
     letter-spacing: 1.1px;
 
     margin-bottom: 8px;
 }
 
-
 .study-line-content h3 {
-    max-width: 360px;
+    max-width: 380px;
 
     color: #eef3f8;
 
-    font-size: 1.8rem;
-
-    line-height: 1.35;
-
+    font-size: 1.85rem;
+    line-height: 1.34;
     font-weight: 650;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 
 
 /* =========================================================
-   UNIVERSITY HIGHLIGHT
+   UNIVERSITY — OPEN, NO BOX
 ========================================================= */
 
 .university-highlight {
     position: relative;
 
     display: flex;
-
     align-items: center;
 
-    gap: 15px;
+    gap: 18px;
 
     width: fit-content;
+    min-width: 0;
 
-    min-width: 330px;
+    margin-top: 28px;
+    padding: 0;
 
-    margin-top: 22px;
-
-    padding:
-        13px
-        18px
-        13px
-        13px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(25, 42, 61, 0.95),
-            rgba(14, 27, 43, 0.90)
-        );
-
-    border:
-        1px solid
-        rgba(56, 189, 248, 0.18);
-
-    border-radius:
-        12px
-        4px
-        12px
-        12px;
-
-    box-shadow:
-        0 18px 35px
-        rgba(0, 0, 0, 0.20),
-        0 0 20px
-        rgba(56, 189, 248, 0.025);
-
-    overflow: hidden;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
 
     transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        transform 0.2s ease;
 }
-
 
 .university-highlight:hover {
     transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(56, 189, 248, 0.34);
-
-    box-shadow:
-        0 22px 42px
-        rgba(0, 0, 0, 0.26),
-        0 0 25px
-        rgba(56, 189, 248, 0.05);
+        translateX(4px);
 }
-
-
-/* cyan top accent */
 
 .university-highlight::before {
     content: "";
@@ -1702,169 +1594,101 @@ ul {
     position: absolute;
 
     left: 0;
-    top: 0;
+    bottom: -12px;
 
-    width: 95px;
-    height: 2px;
+    width: 150px;
+    height: 1px;
 
     background:
         linear-gradient(
             to right,
-            var(--accent),
+            rgba(56, 189, 248, 0.56),
             transparent
         );
-
-    box-shadow:
-        0 0 12px
-        rgba(56, 189, 248, 0.18);
 }
-
-
-/* subtle background shape */
 
 .university-highlight::after {
-    content: "";
-
-    position: absolute;
-
-    width: 70px;
-    height: 70px;
-
-    right: -35px;
-    bottom: -38px;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(56, 189, 248, 0.08);
-
-    pointer-events: none;
+    display: none;
 }
 
 
-/* =========================================================
-   UNIVERSITY LOGO
-========================================================= */
+/* larger logo, no box */
 
 .university-logo-box {
     position: relative;
-
     z-index: 2;
 
-    width: 58px;
-    height: 58px;
+    width: 82px;
+    height: 82px;
 
     flex-shrink: 0;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    padding: 7px;
+    padding: 0;
 
-    background-color:
-        rgba(255, 255, 255, 0.94);
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.15);
-
-    border-radius: 9px;
-
-    box-shadow:
-        0 9px 22px
-        rgba(0, 0, 0, 0.20);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
-
 
 .university-logo {
     width: 100%;
     height: 100%;
 
     object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 8px 14px
+            rgba(0, 0, 0, 0.24)
+        );
 }
-
-
-/* =========================================================
-   UNIVERSITY DETAILS
-========================================================= */
 
 .university-details {
     position: relative;
-
     z-index: 2;
 }
-
 
 .university-details small {
     display: block;
 
-    color: #667d94;
+    color: #6f859a;
 
-    font-size: 0.52rem;
-
+    font-size: 0.57rem;
     font-weight: 700;
 
-    letter-spacing: 1px;
-
+    letter-spacing: 1.1px;
     text-transform: uppercase;
 
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
-
 
 .university-details strong {
     display: block;
 
-    color: #edf3f8;
+    color: #f5f8fb;
 
-    font-size: 0.9rem;
+    font-size: 1.13rem;
+    font-weight: 650;
 
-    font-weight: 600;
-
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
-
 
 .university-details span {
     display: block;
 
-    color: #788b9f;
+    color: #8294a7;
 
-    font-size: 0.64rem;
+    font-size: 0.70rem;
 }
 
 
-@media (max-width: 650px) {
-
-    .university-highlight {
-        min-width: 0;
-        width: 100%;
-
-        max-width: 340px;
-    }
-
-
-    .university-logo-box {
-        width: 52px;
-        height: 52px;
-    }
-
-
-    .university-details strong {
-        font-size: 0.82rem;
-    }
-
-}
-
 /* =========================================================
-   RIGHT SIDE
-========================================================= */
-
-/* =========================================================
-   EDUCATION RIGHT SIDE
+   RIGHT SIDE — OPEN FLOW, FEWER BOXES
 ========================================================= */
 
 .education-right {
@@ -1876,67 +1700,60 @@ ul {
         18px
         0
         15px
-        30px;
+        36px;
 }
 
 
-/* vertical dimensional guide */
+/* vertical guide */
 
 .education-dimension-line {
     position: absolute;
 
     left: 0;
-
-    top: 5%;
+    top: 4%;
 
     width: 1px;
-
-    height: 90%;
+    height: 92%;
 
     background:
         linear-gradient(
             transparent,
-            rgba(56, 189, 248, 0.28),
-            rgba(148, 163, 184, 0.07),
+            rgba(56, 189, 248, 0.30),
+            rgba(148, 163, 184, 0.06),
             transparent
         );
 }
-
 
 .education-dimension-line::before {
     content: "";
 
     position: absolute;
 
-    top: 27%;
-
+    top: 23%;
     left: -3px;
 
     width: 7px;
-
     height: 7px;
 
     border-radius: 50%;
 
-    background-color: var(--accent);
+    background-color:
+        var(--accent);
 
     box-shadow:
         0 0 12px
         rgba(56, 189, 248, 0.35);
 }
 
-
 .education-dimension-line::after {
     content: "";
 
     position: absolute;
 
-    bottom: 24%;
-
+    bottom: 22%;
     left: -2px;
 
     width: 5px;
-
     height: 5px;
 
     border-radius: 50%;
@@ -1945,429 +1762,351 @@ ul {
         1px solid
         rgba(56, 189, 248, 0.65);
 
-    background-color: #0d1725;
+    background-color:
+        #0d1725;
 }
 
 
-/* =========================================================
-   SHARED INFO BOX
-========================================================= */
+/* remove outer boxes entirely */
 
 .edu-info-box {
     position: relative;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(22, 34, 52, 0.92),
-            rgba(13, 24, 39, 0.94)
-        );
-
-    border:
-        1px solid
-        rgba(148, 163, 184, 0.10);
-
-    box-shadow:
-        0 22px 50px
-        rgba(0, 0, 0, 0.22);
-
-    backdrop-filter:
-        blur(8px);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 
 /* =========================================================
-   DIRECTION BOX
+   ACADEMIC DIRECTION — EDITORIAL TEXT BLOCK
 ========================================================= */
 
 .edu-direction-box {
-    width: 89%;
+    width: 100%;
 
-    margin-left: 0;
-
+    margin: 0;
     padding:
-        27px
-        30px
-        28px;
+        12px
+        70px
+        28px
+        0;
 
-    border-radius:
-        4px
-        16px
-        16px
-        16px;
+    border-radius: 0;
+    transform: none;
 
-    transform:
-        translateX(8px);
+    border-bottom:
+        1px solid
+        rgba(148, 163, 184, 0.10);
 }
-
 
 .edu-direction-box::before {
     content: "";
 
     position: absolute;
 
-    top: 0;
+    left: -36px;
+    top: 18px;
 
-    left: 0;
-
-    width: 125px;
-
-    height: 2px;
+    width: 36px;
+    height: 1px;
 
     background:
         linear-gradient(
             to right,
-            var(--accent),
-            transparent
+            rgba(56, 189, 248, 0.75),
+            rgba(56, 189, 248, 0.12)
         );
-
-    box-shadow:
-        0 0 14px
-        rgba(56, 189, 248, 0.17);
 }
-
 
 .box-index {
     position: absolute;
 
-    right: 22px;
-
-    top: 18px;
+    right: 0;
+    top: 3px;
 
     color:
-        rgba(56, 189, 248, 0.12);
+        rgba(56, 189, 248, 0.10);
 
-    font-size: 2.8rem;
-
+    font-size: 4.5rem;
     font-weight: 700;
-
     line-height: 1;
 }
 
-
 .box-content {
     position: relative;
-
     z-index: 2;
 
-    max-width: 510px;
+    max-width: 540px;
 }
-
 
 .edu-small-label {
     display: block;
 
     color: #71869b;
 
-    font-size: 0.65rem;
-
+    font-size: 0.66rem;
     font-weight: 700;
 
     text-transform: uppercase;
-
     letter-spacing: 1.1px;
 
     margin-bottom: 10px;
 }
 
-
 .edu-direction-box h4 {
-    max-width: 430px;
+    max-width: 455px;
 
-    color: #e5ecf3;
+    color: #edf3f8;
 
-    font-size: 1.13rem;
-
-    line-height: 1.5;
-
+    font-size: 1.24rem;
+    line-height: 1.45;
     font-weight: 600;
 
     margin-bottom: 12px;
 }
 
-
 .edu-direction-box p {
-    max-width: 500px;
+    max-width: 530px;
 
-    color: #95a4b5;
+    color: #9dacbc;
 
-    font-size: 0.88rem;
-
-    line-height: 1.8;
+    font-size: 0.91rem;
+    line-height: 1.83;
 }
 
-
 .box-corner {
-    position: absolute;
-
-    right: -1px;
-
-    bottom: -1px;
-
-    width: 30px;
-
-    height: 30px;
-
-    border-right:
-        1px solid
-        rgba(56, 189, 248, 0.38);
-
-    border-bottom:
-        1px solid
-        rgba(56, 189, 248, 0.38);
-
-    border-radius:
-        0
-        0
-        16px
-        0;
+    display: none;
 }
 
 
 /* =========================================================
-   FOCUS BOX
+   TECHNICAL FOCUS — OPEN LIST
 ========================================================= */
 
 .edu-focus-box {
-    width: 94%;
+    width: 100%;
 
-    margin-top: 22px;
-
-    margin-left: 6%;
+    margin:
+        28px
+        0
+        0;
 
     padding:
-        24px
-        25px
-        26px;
+        0;
 
-    border-radius:
-        16px
-        4px
-        16px
-        16px;
-
-    box-shadow:
-        -12px 24px 55px
-        rgba(0, 0, 0, 0.22);
+    border-radius: 0;
+    box-shadow: none;
 }
-
 
 .edu-focus-box::after {
     content: "";
 
     position: absolute;
 
-    top: 0;
+    width: 125px;
+    height: 125px;
 
-    right: 0;
+    right: -30px;
+    top: -10px;
 
-    width: 95px;
+    border-radius: 50%;
 
-    height: 95px;
+    border:
+        1px solid
+        rgba(103, 232, 249, 0.055);
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(56, 189, 248, 0.055),
-            transparent 65%
-        );
+    background: transparent;
 
-    clip-path:
-        polygon(
-            100% 0,
-            100% 100%,
-            0 0
-        );
+    clip-path: none;
 
     pointer-events: none;
 }
 
-
 .focus-box-header {
     position: relative;
-
     z-index: 2;
 
     display: flex;
-
     align-items: flex-start;
-
     justify-content: space-between;
 
     gap: 20px;
 
-    margin-bottom: 19px;
+    margin-bottom: 14px;
 }
 
-
 .focus-box-header h4 {
-    color: #dde6ee;
-
-    font-size: 0.95rem;
-
+    color: #e1e9f0;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-
 .focus-count {
     color:
-        rgba(56, 189, 248, 0.25);
+        rgba(56, 189, 248, 0.20);
 
-    font-size: 1.8rem;
-
+    font-size: 2.35rem;
     font-weight: 700;
-
     line-height: 1;
 }
 
 
-/* =========================================================
-   FOCUS CARDS
-========================================================= */
+/* each focus is now a horizontal line, not a box */
 
 .focus-card-grid {
     position: relative;
-
     z-index: 2;
 
     display: grid;
+    grid-template-columns: 1fr;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 9px;
+    gap: 0;
 }
-
 
 .focus-card {
     position: relative;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+        45px
+        1fr
+        28px;
 
     align-items: center;
 
-    gap: 11px;
+    gap: 14px;
 
-    min-height: 61px;
+    min-height: 58px;
 
     padding:
-        11px
-        12px;
+        13px
+        4px
+        13px
+        0;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(30, 45, 65, 0.82),
-            rgba(21, 34, 51, 0.72)
-        );
+    background: transparent;
 
-    border:
+    border: none;
+
+    border-bottom:
         1px solid
         rgba(148, 163, 184, 0.08);
 
-    border-radius: 7px;
+    border-radius: 0;
 
-    box-shadow:
-        inset 0 1px 0
-        rgba(255, 255, 255, 0.012);
+    box-shadow: none;
+
+    transition:
+        padding-left 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.focus-card::after {
+    content: "↗";
+
+    grid-column: 3;
+
+    grid-row: 1;
+
+    color:
+        rgba(103, 232, 249, 0.34);
+
+    font-size: 0.82rem;
 
     transition:
         transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+        color 0.2s ease;
 }
 
-
 .focus-card:hover {
-    transform:
-        translateY(-3px);
+    transform: none;
+
+    padding-left: 8px;
+
+    background: transparent;
 
     border-color:
         rgba(56, 189, 248, 0.24);
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(32, 49, 71, 0.95),
-            rgba(22, 37, 56, 0.90)
-        );
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 0, 0, 0.18),
-        0 0 15px
-        rgba(56, 189, 248, 0.025);
+    box-shadow: none;
 }
 
+.focus-card:hover::after {
+    transform:
+        translate(2px, -2px);
+
+    color:
+        var(--accent-light);
+}
 
 .focus-number {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    width: 28px;
-
-    height: 28px;
+    width: 34px;
+    height: 34px;
 
     flex-shrink: 0;
 
     color:
-        rgba(103, 232, 249, 0.75);
+        var(--accent-light);
 
     background:
         rgba(56, 189, 248, 0.055);
 
     border:
         1px solid
-        rgba(56, 189, 248, 0.13);
+        rgba(56, 189, 248, 0.14);
 
-    border-radius: 6px;
+    border-radius: 50%;
 
-    font-size: 0.55rem;
-
+    font-size: 0.57rem;
     font-weight: 700;
 }
 
+.focus-card > div {
+    grid-column: 2;
+    grid-row: 1;
+}
 
 .focus-card small {
     display: block;
 
     color: #5e7389;
 
-    font-size: 0.5rem;
+    font-size: 0.50rem;
 
     text-transform: uppercase;
-
     letter-spacing: 0.8px;
 
     margin-bottom: 2px;
 }
 
-
 .focus-card p {
-    color: #bac6d1;
+    color: #c0cad4;
 
-    font-size: 0.72rem;
-
+    font-size: 0.78rem;
     font-weight: 500;
 }
 
 
 /* =========================================================
-   STATUS BOX
+   STATUS — SMALL PILL, NOT A CARD
 ========================================================= */
 
 .edu-status-box {
     position: relative;
 
-    width: 79%;
+    width: fit-content;
 
-    margin-top: 18px;
-
-    margin-left: 4%;
+    margin:
+        24px
+        0
+        0;
 
     display: grid;
 
@@ -2378,53 +2117,45 @@ ul {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 11px;
 
     padding:
-        14px
-        16px;
+        10px
+        13px;
 
     background:
-        rgba(12, 24, 39, 0.86);
+        rgba(56, 189, 248, 0.045);
 
     border:
         1px solid
-        rgba(56, 189, 248, 0.10);
+        rgba(56, 189, 248, 0.11);
 
-    border-radius: 8px;
+    border-radius: 999px;
 
-    box-shadow:
-        0 16px 35px
-        rgba(0, 0, 0, 0.18);
+    box-shadow: none;
 }
 
-
 .status-icon {
-    width: 33px;
-
-    height: 33px;
+    width: 27px;
+    height: 27px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    border-radius: 7px;
+    border-radius: 50%;
 
     background:
-        rgba(56, 189, 248, 0.055);
+        rgba(56, 189, 248, 0.06);
 
     border:
         1px solid
         rgba(56, 189, 248, 0.12);
 }
 
-
 .status-icon span {
-    width: 7px;
-
-    height: 7px;
+    width: 6px;
+    height: 6px;
 
     border-radius: 50%;
 
@@ -2432,27 +2163,23 @@ ul {
         var(--accent);
 
     box-shadow:
-        0 0 12px
-        rgba(56, 189, 248, 0.42);
+        0 0 10px
+        rgba(56, 189, 248, 0.38);
 }
-
 
 .edu-status-box small {
     display: block;
 
-    color: #62778d;
+    color: #657a8f;
 
-    font-size: 0.53rem;
-
+    font-size: 0.50rem;
     font-weight: 700;
 
     text-transform: uppercase;
-
     letter-spacing: 0.8px;
 
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
-
 
 .edu-status-box strong {
     display: block;
@@ -2460,22 +2187,18 @@ ul {
     color: #aebbc7;
 
     font-size: 0.68rem;
-
     font-weight: 500;
 }
 
-
 .status-arrow {
     color:
-        rgba(103, 232, 249, 0.58);
+        rgba(103, 232, 249, 0.55);
 
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 
-/* =========================================================
-   ADDITIONAL DIMENSIONAL BACKGROUND
-========================================================= */
+/* right-side decoration */
 
 .education-right::before {
     content: "";
@@ -2483,129 +2206,39 @@ ul {
     position: absolute;
 
     width: 170px;
-
     height: 170px;
 
-    right: -45px;
+    right: -55px;
+    bottom: 18px;
 
-    top: 95px;
-
-    transform:
-        rotate(18deg);
+    border-radius: 50%;
 
     border:
-        1px solid
-        rgba(56, 189, 248, 0.065);
-
-    border-radius: 25px;
+        1px dashed
+        rgba(56, 189, 248, 0.05);
 
     pointer-events: none;
 }
-
 
 .education-right::after {
     content: "";
 
     position: absolute;
 
-    width: 95px;
+    width: 72px;
+    height: 72px;
 
-    height: 95px;
+    right: 32px;
+    top: 26px;
 
-    left: 5px;
-
-    bottom: 25px;
-
-    border-radius: 50%;
+    transform:
+        rotate(45deg);
 
     border:
-        1px dashed
-        rgba(103, 232, 249, 0.07);
+        1px solid
+        rgba(103, 232, 249, 0.055);
 
     pointer-events: none;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .education-right {
-        min-height: auto;
-
-        padding-left: 25px;
-    }
-
-
-    .edu-direction-box {
-        width: 94%;
-    }
-
-
-    .edu-focus-box {
-        width: 94%;
-
-        margin-left: 3%;
-    }
-
-
-    .edu-status-box {
-        width: 86%;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-    .education-right {
-        padding-left: 0;
-    }
-
-
-    .education-dimension-line {
-        display: none;
-    }
-
-
-    .edu-direction-box,
-    .edu-focus-box,
-    .edu-status-box {
-        width: 100%;
-
-        margin-left: 0;
-    }
-
-
-    .edu-direction-box {
-        transform: none;
-    }
-
-
-    .focus-card-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .education-right::before,
-    .education-right::after {
-        display: none;
-    }
-
-}
-
-.education-note p {
-    color: #8193a6;
-
-    font-size: 0.74rem;
-
-    line-height: 1.5;
 }
 
 
@@ -2621,28 +2254,23 @@ ul {
             0;
     }
 
-
     .education-editorial {
         grid-template-columns: 1fr;
-
-        gap: 40px;
+        gap: 42px;
     }
-
 
     .education-left {
-        min-height: 370px;
+        min-height: 395px;
     }
-
 
     .education-right {
-        padding-left: 0;
+        min-height: auto;
+        padding-left: 28px;
     }
-
 
     .edu-diagonal {
         display: none;
     }
-
 }
 
 
@@ -2654,361 +2282,83 @@ ul {
             0;
     }
 
-
     .education-heading {
         margin-bottom: 45px;
     }
-
 
     .education-heading h2 {
         font-size: 2rem;
     }
 
-
     .education-left {
-        min-height: 320px;
+        min-height: 390px;
     }
-
 
     .degree-vertical {
         display: none;
     }
 
-
     .study-line {
         left: 0;
-
         top: 100px;
     }
 
-
     .study-line-content h3 {
-        font-size: 1.4rem;
+        font-size: 1.42rem;
     }
 
-
-    .focus-list {
-        grid-template-columns: 1fr;
+    .university-highlight {
+        gap: 14px;
+        margin-top: 23px;
     }
 
+    .university-logo-box {
+        width: 68px;
+        height: 68px;
+    }
+
+    .university-details strong {
+        font-size: 1rem;
+    }
+
+    .education-right {
+        padding-left: 0;
+    }
+
+    .education-dimension-line {
+        display: none;
+    }
+
+    .edu-direction-box {
+        padding-right: 48px;
+    }
+
+    .edu-direction-box::before {
+        display: none;
+    }
+
+    .box-index {
+        font-size: 3.4rem;
+    }
+
+    .focus-card {
+        grid-template-columns:
+            40px
+            1fr
+            24px;
+    }
+
+    .education-right::before,
+    .education-right::after {
+        display: none;
+    }
 
     .education-word {
         font-size: 5rem;
-
         letter-spacing: -4px;
     }
-
 }
 
-/* =========================================================
-   PERSONAL INTERESTS
-========================================================= */
-
-.personal-interests {
-    position: relative;
-
-    margin-top: 24px;
-
-    padding: 24px 26px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20, 31, 48, 0.95),
-            rgba(14, 24, 39, 0.95)
-        );
-
-    border:
-        1px solid
-        rgba(148, 163, 184, 0.10);
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 18px 38px
-        rgba(0, 0, 0, 0.18);
-}
-
-
-/* small accent line */
-
-.personal-interests::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 22px;
-
-    width: 3px;
-    height: 45px;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            var(--accent-light),
-            var(--accent)
-        );
-
-    box-shadow:
-        0 0 12px
-        rgba(56, 189, 248, 0.14);
-}
-
-
-.personal-interests-heading span {
-    display: block;
-
-    color: #667b92;
-
-    font-size: 0.6rem;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
-
-    margin-bottom: 4px;
-}
-
-
-.personal-interests-heading h3 {
-    color: #e7edf4;
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    margin-bottom: 16px;
-}
-
-
-/* INTEREST TAGS */
-
-.interest-tags {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-
-.interest-tags span {
-    padding: 7px 10px;
-
-    color: #aebbc8;
-
-    background-color:
-        rgba(27, 41, 59, 0.75);
-
-    border:
-        1px solid
-        rgba(148, 163, 184, 0.09);
-
-    border-radius: 5px;
-
-    font-size: 0.7rem;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease;
-}
-
-
-.interest-tags span:hover {
-    transform: translateY(-2px);
-
-    color: var(--accent-light);
-
-    border-color:
-        rgba(56, 189, 248, 0.28);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 950px) {
-
-    .about-section,
-    .education-section {
-        padding:
-            85px
-            0;
-    }
-
-
-    .about-layout {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-
-    .about-map {
-        max-width: 520px;
-
-        width: 100%;
-    }
-
-
-    .education-background-text {
-        font-size: 7rem;
-    }
-
-
-    .degree-bottom {
-        gap: 30px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .about-section,
-    .education-section {
-        padding:
-            65px
-            0;
-    }
-
-
-    .creative-heading {
-        margin-bottom: 40px;
-    }
-
-
-    .creative-heading h2 {
-        font-size: 1.9rem;
-    }
-
-
-    .section-number {
-        display: none;
-    }
-
-
-    .about-story {
-        padding:
-            29px
-            24px;
-    }
-
-    
-
-    .about-map {
-        min-height: 350px;
-    }
-
-
-    .education-layout {
-        grid-template-columns: 1fr;
-
-        gap: 0;
-    }
-
-
-    .education-timeline {
-        display: none;
-    }
-
-
-    .degree-panel {
-        padding:
-            28px
-            24px;
-    }
-
-
-    .degree-bottom {
-        grid-template-columns: 1fr;
-
-        gap: 27px;
-    }
-
-
-    .education-background-text {
-        font-size: 5rem;
-
-        right: -20px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .creative-heading h2 {
-        font-size: 1.7rem;
-    }
-
-
-    .about-map {
-        min-height: 320px;
-
-        transform:
-            scale(0.9);
-
-        transform-origin:
-            center top;
-    }
-
-
-    .degree-main h3 {
-        font-size: 1.28rem;
-    }
-
-
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 450px) {
-
-    .container {
-        width: 92%;
-    }
-
-    .hero h1 {
-        font-size: 2.35rem;
-    }
-
-    .hero-role {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .role-item {
-        width: 100%;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-}
 
 /* =========================================================
    ABOUT SECTION
