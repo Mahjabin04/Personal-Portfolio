@@ -1,7 +1,13 @@
+// =========================================================
+// CONTACT FORM VALIDATION
+// =========================================================
+
 const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
 
 if (contactForm) {
+
+    const formStatus = document.getElementById("formStatus");
+
     const nameInput = document.getElementById("contactName");
     const emailInput = document.getElementById("contactEmail");
     const subjectInput = document.getElementById("contactSubject");
@@ -12,33 +18,67 @@ if (contactForm) {
 
 
     function showError(input, message) {
-        const formGroup = input.closest(".form-group");
+
+        if (!input) {
+            return;
+        }
+
+        const formGroup =
+            input.closest(".form-group");
+
+        if (!formGroup) {
+            return;
+        }
 
         const errorElement =
             formGroup.querySelector(".form-error");
 
+
         formGroup.classList.add("has-error");
 
-        errorElement.textContent = message;
+
+        if (errorElement) {
+            errorElement.textContent = message;
+        }
+
     }
 
 
     function clearError(input) {
-        const formGroup = input.closest(".form-group");
+
+        if (!input) {
+            return;
+        }
+
+        const formGroup =
+            input.closest(".form-group");
+
+        if (!formGroup) {
+            return;
+        }
 
         const errorElement =
             formGroup.querySelector(".form-error");
 
+
         formGroup.classList.remove("has-error");
 
-        errorElement.textContent = "";
+
+        if (errorElement) {
+            errorElement.textContent = "";
+        }
+
     }
 
 
     function validateName() {
-        const name = nameInput.value.trim();
+
+        const name =
+            nameInput.value.trim();
+
 
         if (name === "") {
+
             showError(
                 nameInput,
                 "Please enter your name."
@@ -47,7 +87,9 @@ if (contactForm) {
             return false;
         }
 
+
         if (name.length < 2) {
+
             showError(
                 nameInput,
                 "Name must contain at least 2 characters."
@@ -56,6 +98,7 @@ if (contactForm) {
             return false;
         }
 
+
         clearError(nameInput);
 
         return true;
@@ -63,9 +106,13 @@ if (contactForm) {
 
 
     function validateEmail() {
-        const email = emailInput.value.trim();
+
+        const email =
+            emailInput.value.trim();
+
 
         if (email === "") {
+
             showError(
                 emailInput,
                 "Please enter your email address."
@@ -74,7 +121,9 @@ if (contactForm) {
             return false;
         }
 
+
         if (!emailPattern.test(email)) {
+
             showError(
                 emailInput,
                 "Please enter a valid email address."
@@ -83,6 +132,7 @@ if (contactForm) {
             return false;
         }
 
+
         clearError(emailInput);
 
         return true;
@@ -90,9 +140,13 @@ if (contactForm) {
 
 
     function validateSubject() {
-        const subject = subjectInput.value.trim();
+
+        const subject =
+            subjectInput.value.trim();
+
 
         if (subject === "") {
+
             showError(
                 subjectInput,
                 "Please enter a subject."
@@ -101,7 +155,9 @@ if (contactForm) {
             return false;
         }
 
+
         if (subject.length < 3) {
+
             showError(
                 subjectInput,
                 "Subject must contain at least 3 characters."
@@ -110,6 +166,7 @@ if (contactForm) {
             return false;
         }
 
+
         clearError(subjectInput);
 
         return true;
@@ -117,9 +174,13 @@ if (contactForm) {
 
 
     function validateMessage() {
-        const message = messageInput.value.trim();
+
+        const message =
+            messageInput.value.trim();
+
 
         if (message === "") {
+
             showError(
                 messageInput,
                 "Please enter your message."
@@ -128,7 +189,9 @@ if (contactForm) {
             return false;
         }
 
+
         if (message.length < 10) {
+
             showError(
                 messageInput,
                 "Message must contain at least 10 characters."
@@ -137,11 +200,14 @@ if (contactForm) {
             return false;
         }
 
+
         clearError(messageInput);
 
         return true;
     }
 
+
+    // Real-time validation
 
     nameInput.addEventListener(
         "input",
@@ -167,6 +233,8 @@ if (contactForm) {
     );
 
 
+    // Form submission
+
     contactForm.addEventListener(
         "submit",
         function (event) {
@@ -187,12 +255,14 @@ if (contactForm) {
                 validateMessage();
 
 
-            if (
+            const formIsValid =
                 isNameValid &&
                 isEmailValid &&
                 isSubjectValid &&
-                isMessageValid
-            ) {
+                isMessageValid;
+
+
+            if (formIsValid) {
 
                 formStatus.textContent =
                     "Message validated successfully.";
@@ -210,11 +280,13 @@ if (contactForm) {
 
 
                 setTimeout(function () {
+
                     formStatus.textContent = "";
 
                     formStatus.classList.remove(
                         "success"
                     );
+
                 }, 4000);
 
             } else {
@@ -233,4 +305,126 @@ if (contactForm) {
 
         }
     );
+
+}
+
+
+
+// =========================================================
+// MOBILE NAVIGATION
+// =========================================================
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                navLinks.classList.toggle(
+                    "open"
+                );
+
+
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+    );
+
+
+    const navItems =
+        navLinks.querySelectorAll("a");
+
+
+    navItems.forEach(function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+
+                menuToggle.classList.remove(
+                    "active"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            }
+        );
+
+    });
+
+
+    // Close mobile menu when screen becomes desktop-size
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (window.innerWidth > 720) {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+
+                menuToggle.classList.remove(
+                    "active"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            }
+
+        }
+    );
+
 }
